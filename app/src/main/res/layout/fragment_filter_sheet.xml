@@ -33,38 +33,38 @@
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/rbAny"
             android:layout_width="match_parent"
-            android:textColor="@color/black"
             android:layout_height="wrap_content"
-            android:text="Any" />
+            android:text="Any"
+            android:textColor="@color/black" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/rbRed"
-            android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Red" />
+            android:text="Red"
+            android:textColor="@color/black" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/rbBlue"
             android:layout_width="match_parent"
-            android:textColor="@color/black"
             android:layout_height="wrap_content"
-            android:text="Blue" />
+            android:text="Blue"
+            android:textColor="@color/black" />
 
 
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/rbBlack"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:text="Black" />
+            android:text="Black"
+            android:textColor="@color/black" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/rbWhite"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:text="White" />
+            android:text="White"
+            android:textColor="@color/black" />
     </RadioGroup>
 
     <com.google.android.material.textview.MaterialTextView
@@ -77,22 +77,21 @@
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/etPrice"
-        android:textColor="@color/black"
-        android:hint="Price"
-        android:textColorHint="@color/gray"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:hint="Price"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnDone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_16sdp"
         android:layout_marginBottom="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
         android:backgroundTint="@color/purple_700"
         android:text="Done"
         android:textAllCaps="true"
         android:textSize="@dimen/_12ssp" />
-
 
 </androidx.appcompat.widget.LinearLayoutCompat>
