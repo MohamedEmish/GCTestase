@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.coordinatorlayout.widget.CoordinatorLayout
-import com.amosh.gctestase.R
 import com.amosh.gctestase.data.CarColor
 import com.amosh.gctestase.data.FilterBody
 import com.amosh.gctestase.databinding.FragmentFilterSheetBinding
@@ -18,9 +17,8 @@ class FilterSheetFragment : BottomSheetDialogFragment() {
     private var _binding: FragmentFilterSheetBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var listener: OnActionsListener
+    private var listener: OnActionsListener? = null
     private var filterBody: FilterBody = FilterBody()
-
 
     override fun onStart() {
         super.onStart()
@@ -71,8 +69,8 @@ class FilterSheetFragment : BottomSheetDialogFragment() {
                 
                 filterBody.price = etPrice.text?.toString()?.toDoubleOrNull()
 
-                listener.onDoneListener(
-                    filterBody ?: FilterBody()
+                listener?.onDoneListener(
+                    filterBody
                 )
             }
         }
@@ -87,7 +85,7 @@ class FilterSheetFragment : BottomSheetDialogFragment() {
 
         @JvmStatic
         fun newInstance(
-            listener: OnActionsListener,
+            listener: OnActionsListener?,
             filterBody: FilterBody?,
         ): FilterSheetFragment {
             val fragment = FilterSheetFragment()

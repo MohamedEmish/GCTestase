@@ -50,7 +50,6 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
                     filterBody
                 )
             filterSheet?.show(parentFragmentManager, FilterSheetFragment.TAG)
-
         }
     }
 
@@ -71,15 +70,18 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
                         binding.tvEmptyMessage.text = it.status?.message
                         adapter.submitList(mutableListOf())
                         adapter.notifyDataSetChanged()
+                        filterSheet?.dismiss()
                     }
                     is AppResult.SuccessWithList -> {
                         val data = it.cars
                         binding.emptyState.isVisible = data.isNullOrEmpty()
                         adapter.submitList(data)
                         adapter.notifyDataSetChanged()
+                        filterSheet?.dismiss()
                     }
                 }
             }
         }
     }
+
 }
